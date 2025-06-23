@@ -91,14 +91,35 @@ header {
   position: absolute;
   inset: 0;
   width: 100vw;
+  /* height: auto; */
   height: 100dvh;
       background-repeat: no-repeat;
      background-size: 100% 100%;
-     min-height: 60vh;
+     /* min-height: 60vh; */
   /* filter: blur(1.5px) brightness(0.85); */
   z-index: 0;
   transform: scale(1.06);
   transition: background-image 1s ease, transform 7s ease;
+}
+
+@media (max-width: 768px) {
+ .hero{
+  width: 100vw;
+  height: 60dvh;
+ } .hero-bg {
+    position: absolute;
+  inset: 0;
+  width: 100vw;
+  /* height: auto; */
+  height: 60dvh;
+      background-repeat: no-repeat;
+     background-size: 100% 100%;
+     /* min-height: 60vh; */
+  /* filter: blur(1.5px) brightness(0.85); */
+  z-index: 0;
+  transform: scale(1.06);
+  transition: background-image 1s ease, transform 7s ease;
+  }
 }
 
 
