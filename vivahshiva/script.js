@@ -28,6 +28,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 7500);
     }
 
+    
+
     // Typing effect for services
     const services = [
         "Pre-Weddings",
@@ -70,6 +72,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     
 });
+
+
 
 // Animated number increment when in view
 function animateCount(el, target, duration) {
