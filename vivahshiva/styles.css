@@ -747,12 +747,14 @@ h1 {
     background: none;
     border: none;
     outline: none;
+    display: flex;
   }
 
   .nav-toggle span {
     display: block;
-    width: 28px;
+    width: 20px;
     height: 0.3px;
+    margin: 2px 0;
     /* margin: 4px 0; */
     background: #fff;
     border-radius: 2px;
