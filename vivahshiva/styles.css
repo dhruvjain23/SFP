@@ -915,7 +915,7 @@ h1 {
 
 .expertise-section {
   padding: 60px 0 70px 0;
-  background: #181818;
+  /* background: #181818; */
   min-height: 60vh;
 }
 .expertise-header {
@@ -925,7 +925,7 @@ h1 {
 }
 .expertise-header h2 {
   font-size: 2.9rem;
-  font-family: "Montserrat", serif;
+  font-family: 'Montserrat', serif;
   font-weight: 800;
   margin-bottom: 18px;
 }
@@ -941,39 +941,82 @@ h1 {
 .expertise-cards {
   display: flex;
   justify-content: center;
-  gap: 38px;
+  gap: 25px;
   margin-top: 16px;
   flex-wrap: wrap;
 }
+
+/* Updated Card Container */
 .expertise-card {
-  width: 330px;
-  height: 360px;
-  background: #232323;
-  border-radius: 6px;
+  width: 350px;
+  height: 460px;
+  /* background: #232323; */
+  /* border-radius: 6px; */
   overflow: hidden;
-  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 16px 0 inherit;
+  cursor: pointer;
+  perspective: 1200px;
+  /* transform-style: preserve-3d; */
   position: relative;
+}
+
+/* Card Inner Container for 3D Flip */
+.expertise-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+/* Front and Back Faces */
+.expertise-card-front, 
+.expertise-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Front Face (Visible by default) */
+.expertise-card-front {
+  transform: rotateY(0deg);
+  z-index: 2;
+}
+
+/* Back Face (Hidden initially) */
+.expertise-card-back {
+  transform: rotateY(180deg);
+  background: #D29473;
+  color: #fff;
   display: flex;
   flex-direction: column;
-  cursor: pointer;
-  transform-style: preserve-3d;
-  transition: box-shadow 0.28s cubic-bezier(0.4, 0.2, 0.3, 1),
-    transform 0.48s cubic-bezier(0.5, 1.7, 0.32, 1.2);
-  will-change: transform;
-  perspective: 900px;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+  text-align: center;
 }
+
+/* Flip on hover */
+.expertise-card:hover .expertise-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Image Styles */
 .expertise-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  pointer-events: none;
   display: block;
-  transition: filter 0.32s cubic-bezier(0.57, 0, 0.42, 1);
 }
+
+/* Icon Styles - Moved to front face */
 .expertise-card .expertise-icon {
   position: absolute;
-  left: 18px;
-  bottom: 18px;
+  left: 45%;
+  top: 79%;
+  transform: translateX(-50%) scale(1.3) rotate(-2deg);
   z-index: 3;
   display: flex;
   align-items: center;
@@ -982,88 +1025,40 @@ h1 {
   font-size: 1.08rem;
   font-weight: 700;
   text-shadow: 0 2px 14px #111a;
-  pointer-events: none;
-  transition: transform 0.38s cubic-bezier(0.6, 0.2, 0.4, 1);
+  transition: all 0.5s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
+
 .expertise-card .expertise-icon svg {
   filter: drop-shadow(0 1px 5px #222b);
-  transition: transform 0.45s cubic-bezier(0.63, 0.04, 0.37, 1.11);
 }
 
+/* Description Styles - Now on back face */
 .expertise-card .expertise-desc {
-  position: absolute;
-  inset: 0;
-  background: rgba(24, 24, 24, 0.82); /* transparent black */
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  text-align: center;
-  font-size: 1.13rem;
-  font-family: "Montserrat", Arial, sans-serif;
-  font-weight: 500;
+  font-size: 15px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  /* font-weight: 500; */
   line-height: 1.6;
-  padding: 70px 24px 20px 24px;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(15px) scale(0.96);
-  transition: opacity 0.35s cubic-bezier(0.6, 1.34, 0.44, 1),
-    transform 0.37s cubic-bezier(0.8, 0.2, 0.2, 1.1);
-  z-index: 4;
-}
-
-.expertise-card:hover .expertise-desc,
-.expertise-card:focus .expertise-desc {
-  opacity: 1;
-  pointer-events: all;
-  transform: translateY(0) scale(1);
-}
-
-/* Animated Icon as Heading on Hover */
-.expertise-card .expertise-icon {
-  position: absolute;
-  left: 18px;
-  bottom: 18px;
-  z-index: 5;
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  color: #fff;
-  font-size: 1.08rem;
-  font-weight: 700;
-  text-shadow: 0 2px 14px #111a;
-  pointer-events: none;
-  transition: transform 0.38s cubic-bezier(0.6, 0.2, 0.4, 1),
-    left 0.44s cubic-bezier(0.72, 0.12, 0.38, 1.25),
-    top 0.44s cubic-bezier(0.72, 0.12, 0.38, 1.25),
-    bottom 0.44s cubic-bezier(0.72, 0.12, 0.38, 1.25);
-}
-
-/* On hover, move icon to top-center and scale up */
-.expertise-card:hover .expertise-icon,
-.expertise-card:focus .expertise-icon,
-.expertise-card .expertise-desc .expertise-icon {
-  left: 50%;
-  top: 38px;
-  bottom: auto;
-  transform: translateX(-50%) scale(1.3) rotate(-2deg);
-  transition-delay: 0.12s;
-  margin-bottom: 14px;
-  position: absolute;
-}
-
-/* Hide icon in original place when not hovered */
-.expertise-card:not(:hover) .expertise-icon,
-.expertise-card:not(:focus) .expertise-icon {
-  top: auto;
-  left: 18px;
-  bottom: 18px;
   transform: none;
-  margin-bottom: 0;
-  position: absolute;
+  margin-bottom: 80px;
+  margin-left: 30px;
 }
 
+/* Add depth to back face text */
+.expertise-card-back::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  transform: translateZ(-20px);
+  z-index: -1;
+  border-radius: 6px;
+  display: none;
+}
+
+/* Responsive Styles */
 @media (max-width: 1100px) {
   .expertise-cards {
     gap: 18px;
@@ -1073,6 +1068,7 @@ h1 {
     height: 290px;
   }
 }
+
 @media (max-width: 880px) {
   .expertise-cards {
     flex-direction: column;
@@ -1084,6 +1080,7 @@ h1 {
     max-width: 350px;
   }
 }
+
 @media (max-width: 500px) {
   .expertise-header h2 {
     font-size: 1.35rem;
@@ -1096,11 +1093,10 @@ h1 {
     font-size: 0.95rem;
     padding: 14px;
   }
-}
-
-/* Parallax 3D Card Hover (JS adds .is-hovering) */
-.expertise-card.is-hovering {
-  /* Will get dynamic transform from JS */
+  .expertise-card .expertise-icon {
+    top: 28px;
+    transform: translateX(-50%) scale(1.1) rotate(-2deg);
+  }
 }
 
 .reviews-section {
