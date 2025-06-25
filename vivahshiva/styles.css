@@ -182,6 +182,42 @@ h1 {
   letter-spacing: 3px;
 }
 
+@media (max-width: 768px) {
+  section[style*="position: relative; height: 400px;"] {
+    height: auto !important;
+  }
+
+  footer[style*="display: flex;"] {
+    padding: 30px 15px 20px !important;
+    align-items: flex-start !important;
+  }
+
+  footer > div[style*="display: flex;"] {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  footer ul {
+    justify-content: center !important;
+  }
+
+  footer
+    div[style*="display: flex; gap: 15px; justify-content: flex-end; align-items: center;"] {
+    justify-content: center !important;
+    margin-top: 10px;
+  }
+
+  /* 🔧 Dashed line alignment fix */
+  footer > div[style*="border-top: 1px dashed"] {
+    margin: 0 auto !important;
+    width: 80% !important;
+  }
+  footer div[style*="flex: 1 1 300px"] {
+    flex: 1 1 200px !important;
+  }
+}
+
 .zigzag {
   position: absolute;
   left: 0;
