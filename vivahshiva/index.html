@@ -2,12 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Vivah Shiva - Wedding Photography</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Google Fonts -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-/smD4U60YqEvw8eL4jcyLXYcJYt4MxFz9sFHZUJ0wmu4KfqblKRzUCN3B4N07uXYyk8Fq0bUjQZ0K0cz/jb4Ug==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <title>Vivah Shiva - Wedding Photography</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-/smD4U60YqEvw8eL4jcyLXYcJYt4MxFz9sFHZUJ0wmu4KfqblKRzUCN3B4N07uXYyk8Fq0bUjQZ0K0cz/jb4Ug=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap" rel="stylesheet">
@@ -20,129 +22,131 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="images/logo.jpg" alt="Filmic Logo" height="38">
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="images/logo.jpg" alt="Filmic Logo" height="38">
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Portfolio</a></li>
+        <li><a href="#expertise">Services</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact" class="quote-btn">Get a Quote!</a></li>
+
+      </ul>
+    </nav>
+
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-fade"></div>
+      <div class="hero-content">
+        <h1>
+          <span class="script">VivahShiva</span>
+          <span class="headline">
+            PHOTOGRAPHY
+            <!-- Zigzag underline SVG -->
+            <div class="underline-container">
+              <svg viewBox="0 0 600 20" style="margin-top: 5px;">
+                <path class="wavy-line"
+                  d="M9.3,12.3c49.3-3,150.7-7.6,199.7-7.4c121.9,0.4,189.9,0.4,282.3,7.2C380.1,14.6,181.2,15.6,70,24 c82.6-2.9,254.2-1,335.9,1.3c-56,1.4-137.2-0.3-197.1,9">
+                </path>
+              </svg>
             </div>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
-            </button>
-            <ul class="nav-links" id="navLinks">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#gallery">Portfolio</a></li>
-             <li><a href="#expertise">Services</a></li>
-              <li><a href="#reviews">Reviews</a></li>
-              <li><a href="#gallery">Gallery</a></li>
-             <li><a href="#contact" class="quote-btn">Get a Quote!</a></li>
-                
+          </span>
+        </h1>
+        <p class="text-[16px]" style="font-size: 20px;">
+          Vivah Shiva Production offers professional photography and videography </br> services for
+          <span id="typewrite"></span>
+        </p>
+        <button class="cta-btn">Let's Capture Your Story</button>
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+
+    <section class="about-section" id="about">
+      <div class="about-flex">
+        <div class="about-title">
+          <h2>More<br>about<br>us.</h2>
+        </div>
+        <div class="about-image">
+          <img src="images/about/1.jpg" alt="Photographer">
+        </div>
+        <div class="about-content">
+          <p>
+            <b>At <span style="color: #ffa886">Vivah Shiva</span></b>, we believe every moment has the
+            potential to be cinematic. Founded on the passion for storytelling through images, we have years
+            of experience in delivering top-quality photography and videography services across various
+            industries. Our team of skilled photographers and cinematographers is committed to crafting
+            visuals that resonate with authenticity, creativity, and elegance.
+          </p>
+          <div class="about-why">
+            <b>Why Choose Us?</b>
+            <ul>
+              <li>Experienced Professionals</li>
+              <li>Creative Storytelling</li>
+              <li>High-Quality Equipment</li>
+              <li>Personalized Service</li>
             </ul>
-        </nav>
+          </div>
+        </div>
+      </div>
+      <div class="about-stats">
+        <div class="about-stat">
+          <span class="stat-number" data-target="1745">0</span>+
+          <div class="stat-label">Photoshoots Done</div>
+        </div>
+        <div class="about-stat">
+          <span class="stat-number" data-target="10">0</span>+
+          <div class="stat-label">Years of Experience</div>
+        </div>
+        <div class="about-stat">
+          <span class="stat-number" data-target="4.5">0</span>
+          <div class="stat-label">
+            <span class="star">&#11088;</span>
+            rated on Google
+          </div>
+        </div>
+      </div>
+    </section>
 
-    </header>
-    <main>
-        <section class="hero" id="home">
-            <div class="hero-bg"></div>
-            <div class="hero-overlay"></div>
-            <div class="hero-fade"></div>
-            <div class="hero-content">
-                <h1>
-                    <span class="script">VivahShiva</span>
-                    <span class="headline" >
-                        PHOTOGRAPHY
-                        <!-- Zigzag underline SVG -->
-                        <div class="underline-container">
-                            <svg viewBox="0 0 600 20" style="margin-top: 5px;">
-                                <path class="wavy-line" d="M9.3,12.3c49.3-3,150.7-7.6,199.7-7.4c121.9,0.4,189.9,0.4,282.3,7.2C380.1,14.6,181.2,15.6,70,24 c82.6-2.9,254.2-1,335.9,1.3c-56,1.4-137.2-0.3-197.1,9"></path>
-                            </svg>
-                        </div>
-                    </span>
-                </h1>
-                <p class="text-[16px]" style="font-size: 20px;">
-                    Vivah Shiva Production offers professional photography and videography </br> services for
-                    <span id="typewrite"></span>
-                </p>
-                <button class="cta-btn">Let's Capture Your Story</button>
-            </div>
-        </section>
+    <!-- Section 3 -->
 
-        <!-- Section 2 -->
+    <section class="gallery-section" id="gallery">
+      <div class="gallery-header">
+        <h2>
+          Memories, <span style="color: #d9bfa6;">We captured through our Journey.</span>
+        </h2>
+        <p>
+          Here’s a selection of our projects, showcasing a variety of styles, moods, and moments.
+          Whether it’s a grand wedding, corporate event, or intimate family portrait, we treat every project
+          with the same level of passion and precision.
+        </p>
+      </div>
+      <div class="gallery-carousel-outer">
+        <div class="gallery-carousel" id="galleryCarousel">
+          <!-- 6 sample images, add/remove as needed -->
+          <div class="carousel-img"><img src="images/gallery/1.jpg" alt=""></div>
+          <div class="carousel-img"><img src="images/gallery/2.jpg" alt=""></div>
+          <div class="carousel-img"><img src="images/gallery/3.jpg" alt=""></div>
+          <div class="carousel-img"><img src="images/gallery/4.jpg" alt=""></div>
+          <div class="carousel-img"><img src="images/gallery/5.jpg" alt=""></div>
+          <div class="carousel-img"><img src="images/gallery/6.jpg" alt=""></div>
 
-        <section class="about-section" id="about" >
-            <div class="about-flex">
-                <div class="about-title">
-                    <h2>More<br>about<br>us.</h2>
-                </div>
-                <div class="about-image">
-                    <img src="images/about/1.jpg" alt="Photographer">
-                </div>
-                <div class="about-content">
-                    <p>
-                        <b>At <span style="color: #ffa886">Vivah Shiva</span></b>, we believe every moment has the
-                        potential to be cinematic. Founded on the passion for storytelling through images, we have years
-                        of experience in delivering top-quality photography and videography services across various
-                        industries. Our team of skilled photographers and cinematographers is committed to crafting
-                        visuals that resonate with authenticity, creativity, and elegance.
-                    </p>
-                    <div class="about-why">
-                        <b>Why Choose Us?</b>
-                        <ul>
-                            <li>Experienced Professionals</li>
-                            <li>Creative Storytelling</li>
-                            <li>High-Quality Equipment</li>
-                            <li>Personalized Service</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="about-stats">
-                <div class="about-stat">
-                    <span class="stat-number" data-target="1745">0</span>+
-                    <div class="stat-label">Photoshoots Done</div>
-                </div>
-                <div class="about-stat">
-                    <span class="stat-number" data-target="10">0</span>+
-                    <div class="stat-label">Years of Experience</div>
-                </div>
-                <div class="about-stat">
-                    <span class="stat-number" data-target="4.5">0</span>
-                    <div class="stat-label">
-                        <span class="star">&#11088;</span>
-                        rated on Google
-                    </div>
-                </div>
-            </div>
-        </section>
+        </div>
+      </div>
+    </section>
 
-        <!-- Section 3 -->
-
-        <section class="gallery-section" id="gallery">
-            <div class="gallery-header">
-                <h2>
-                    Memories, <span style="color: #d9bfa6;">We captured through our Journey.</span>
-                </h2>
-                <p>
-                    Here’s a selection of our projects, showcasing a variety of styles, moods, and moments.
-                    Whether it’s a grand wedding, corporate event, or intimate family portrait, we treat every project
-                    with the same level of passion and precision.
-                </p>
-            </div>
-            <div class="gallery-carousel-outer">
-                <div class="gallery-carousel" id="galleryCarousel">
-                    <!-- 6 sample images, add/remove as needed -->
-                    <div class="carousel-img"><img src="images/gallery/1.jpg" alt=""></div>
-                    <div class="carousel-img"><img src="images/gallery/2.jpg" alt=""></div>
-                    <div class="carousel-img"><img src="images/gallery/3.jpg" alt=""></div>
-                    <div class="carousel-img"><img src="images/gallery/4.jpg" alt=""></div>
-                    <div class="carousel-img"><img src="images/gallery/5.jpg" alt=""></div>
-                    <div class="carousel-img"><img src="images/gallery/6.jpg" alt=""></div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Video Section -->
+    <!-- Video Section -->
 
      <section class="video-art-section">
   <!-- Top SVG Divider -->
@@ -176,7 +180,7 @@
 
 
 
-        <!-- Expertise Section  -->
+    <!-- Expertise Section  -->
 
         <section class="expertise-section">
   <div class="expertise-header">
@@ -250,198 +254,194 @@
 </section>
 
 
-        <section class="reviews-section" id="reviews">
-            <div class="reviews-container">
-                <div class="reviews-info">
-                    <h2>See what people say<br>about us.</h2>
-                    <p>
-                        We are rated 4.5 <span class="star">&#11088;</span> on Google by our beloved clients we have
-                        worked with ever since.
-                    </p>
-                </div>
-                <div class="reviews-carousel">
-                    <div class="reviews-cards" id="carouselTrack">
-                        <!-- Example Review Cards -->
-                        <div class="review-card">
-                            <div class="review-avatar">
-                                <img src="https://i.pinimg.com/736x/55/b5/9c/55b59c73bd0ee0e42c0022168b9d36be.jpg"
-                                    alt="Ragini Dubey">
-                            </div>
-                            <div class="reviewer-name">Ragini Dubey</div>
-                            <div class="review-rating">5 <span class="star">&#11088;</span></div>
-                            <div class="review-text">Had a great shoot, their team is extraordinarily experienced.</div>
-                        </div>
-                        <div class="review-card">
-                            <div class="review-avatar">
-                                <img src="https://i.pinimg.com/736x/9c/f4/da/9cf4daa1185e463bd67c6ac53de356be.jpg"
-                                    alt="Shruti Dave">
-                            </div>
-                            <div class="reviewer-name">Shruti Dave</div>
-                            <div class="review-rating">5 <span class="star">&#11088;</span></div>
-                            <div class="review-text">The shoot was fun, team was so friendly and professional.</div>
-                        </div>
-                        <div class="review-card">
-                            <div class="review-avatar">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjtJqiPNplZ_hwP_fXLOLxBeQ-yqxIxVsHPQ&s"
-                                    alt="Arjun Malhotra">
-                            </div>
-                            <div class="reviewer-name">Arjun Malhotra</div>
-                            <div class="review-rating">4.9 <span class="star">&#11088;</span></div>
-                            <div class="review-text">Incredible experience, the photos exceeded our expectations!</div>
-                        </div>
-                        <div class="review-card">
-                            <div class="review-avatar">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFQ8g9Dtd1sWV93jeenBwmjoCz0nOzLxA3oQ&s"
-                                    alt="Nisha Singh">
-                            </div>
-                            <div class="reviewer-name">Nisha Singh</div>
-                            <div class="review-rating">5 <span class="star">&#11088;</span></div>
-                            <div class="review-text">Best wedding memories captured perfectly. Highly recommended!</div>
-                        </div>
-                    </div>
-                </div>
+    <section class="reviews-section" id="reviews">
+      <div class="reviews-container">
+        <div class="reviews-info">
+          <h2>See what people say about us.</h2>
+          <p>
+            We are rated 4.5 <span class="star">&#11088;</span> on Google by our beloved clients we have
+            worked with ever since.
+          </p>
+        </div>
+        <div class="reviews-carousel">
+          <div class="reviews-cards" id="carouselTrack">
+            <!-- Example Review Cards -->
+            <div class="review-card">
+              <div class="review-avatar">
+                <img src="https://i.pinimg.com/736x/55/b5/9c/55b59c73bd0ee0e42c0022168b9d36be.jpg" alt="Ragini Dubey">
+              </div>
+              <div class="reviewer-name">Ragini Dubey</div>
+              <div class="review-rating">5 <span class="star">&#11088;</span></div>
+              <div class="review-text">Had a great shoot, their team is extraordinarily experienced.</div>
             </div>
-            <br><br><br>
-            <!-- Bottom Wave SVG -->
-            <div class="wave wave-bottom">
-                <svg viewBox="0 0 1440 90" width="100%" height="90">
-                    <path fill="#f2f2f2" d="M0,0 C330,90 1140,-90 1440,90 L1440,90 L0,90 Z" />
-                </svg>
+            <div class="review-card">
+              <div class="review-avatar">
+                <img src="https://i.pinimg.com/736x/9c/f4/da/9cf4daa1185e463bd67c6ac53de356be.jpg" alt="Shruti Dave">
+              </div>
+              <div class="reviewer-name">Shruti Dave</div>
+              <div class="review-rating">5 <span class="star">&#11088;</span></div>
+              <div class="review-text">The shoot was fun, team was so friendly and professional.</div>
             </div>
-        </section>
-
-        <section class="contact-section" id="contact">
-            <div class="contact-flex">
-                <div class="contact-left">
-                    <h2>Make a move towards<br>our Picture Perfect Relation.</h2>
-                    <iframe class="contact-map"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.992541685409!2d77.43936587601107!3d23.170472310791343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c4364465bc1a7%3A0x68f59b009c382b23!2sShiva%20Mehar%20Films!5e0!3m2!1sen!2sin!4v1750500818850!5m2!1sen!2sin"
-                        width="380" height="220" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                    <div class="contact-buttons">
-                        <a href="tel:+919200010123" class="contact-btn">
-                            <span class="contact-btn-icon">📞</span>
-                            <span><b>Phone</b><br><span>+91-9200010123</span></span>
-                        </a>
-                        <a href="mailto:shivameharfilms2@gmail.com" class="contact-btn">
-                            <span class="contact-btn-icon">📧</span>
-                            <span><b>E-mail</b><br><span>shivameharfilms2@gmail.com</span></span>
-                        </a>
-                    </div>
-                </div>
-                <form class="contact-form" id="quoteForm" autocomplete="off">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Your cool name *</label>
-                            <input type="text" id="yourName" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Your contact number *</label>
-                            <input type="text" id="yourPhone" required pattern="[0-9+\-\s]+" maxlength="18">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label>Your cool email *</label>
-                        <input type="email" id="yourEmail" required>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Dropdown *</label>
-                            <select id="yourDropdown" required>
-                                <option>Wedding</option>
-                                <option>Pre-Wedding</option>
-                                <option>Baby Shower</option>
-                                <option>Corporate Event</option>
-                                <option>Portrait</option>
-                                <option>Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Where are you from? *</label>
-                            <input type="text" id="yourLocation" required>
-                        </div>
-                    </div>
-                    <button type="submit" class="quote-btn-main">Get yourself a quote!</button>
-                </form>
+            <div class="review-card">
+              <div class="review-avatar">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjtJqiPNplZ_hwP_fXLOLxBeQ-yqxIxVsHPQ&s"
+                  alt="Arjun Malhotra">
+              </div>
+              <div class="reviewer-name">Arjun Malhotra</div>
+              <div class="review-rating">4.9 <span class="star">&#11088;</span></div>
+              <div class="review-text">Incredible experience, the photos exceeded our expectations!</div>
             </div>
-        </section>
-<!-- Wavy Footer Top (3 Layer Waves) -->
-
-
-
-<!-- Wavy SVG Footer -->
-<section style="margin-top: 0px; padding: 0; position: relative; height: 400px;">
-
-  <!-- Clean 3-Wave Transition -->
- <div style="position: relative; width: 100%; overflow: hidden; line-height: 0; margin-bottom: -1px; ">
-  
-  <!-- Wave 1 - Light Gray -->
-  <svg viewBox="0 0 1440 30" preserveAspectRatio="none" style="width: 100%; height: 17px;">
-    <path fill="#e5e5e5" d="M0,15 C360,25 1080,5 1440,15 L1440,0 L0,0 Z"></path>
-  </svg>
-
-  <!-- Wave 2 - Medium Gray -->
-  <svg viewBox="0 0 1440 30" preserveAspectRatio="none" style="width: 100%; height: 17px; margin-top: -15px;">
-    <path fill="#888888" fill-opacity="0.6" d="M0,20 C360,30 1080,10 1440,20 L1440,0 L0,0 Z"></path>
-  </svg>
-
-  <!-- Wave 3 - Dark Gray -->
-  <svg viewBox="0 0 1440 30" preserveAspectRatio="none" style="width: 100%; height: 17px; margin-top: -15px;">
-    <path fill="#222222" fill-opacity="0.9" d="M0,25 C360,30 1080,15 1440,25 L1440,0 L0,0 Z"></path>
-  </svg>
-
-</div>
-
-  <!-- Footer -->
-  <footer style="background-color: #111; color: white; padding: 60px 20px 30px; font-family: sans-serif; z-index: 1; position: relative; height: 100%; align-items: center; display: flex; flex-direction: column; justify-content: flex-end; ">
- <div style="max-width: 1200px;  border-top: 1px dashed #ffffff88; height: 1px; width: 60%; padding: 10px;"></div>
-
-    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: auto; ">
+            <div class="review-card">
+              <div class="review-avatar">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFQ8g9Dtd1sWV93jeenBwmjoCz0nOzLxA3oQ&s"
+                  alt="Nisha Singh">
+              </div>
+              <div class="reviewer-name">Nisha Singh</div>
+              <div class="review-rating">5 <span class="star">&#11088;</span></div>
+              <div class="review-text">Best wedding memories captured perfectly. Highly recommended!</div>
+            </div>
+          </div>
+        </div>
+      </div>
       
-      <!-- Left -->
-      <div style="flex: 1 1 300px;">
-        <!-- <img src="your-logo.png" alt="Filmic Logo" style="width: 100px; margin-bottom: 20px;"> -->
-         <div style="font-size: 40px; font-weight: 900;   font-family: Bebas Neue, sans-serif;">Vivah Shiva</div>
-        <div style="line-height: 1.6;">
-          We are Vivah Shiva Production and we have been in business with an experience 10+ years since 2014.
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="contact-flex">
+        <div class="contact-left">
+          <h2>Make a move towards<br>our Picture Perfect Relation.</h2>
+          <iframe class="contact-map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.992541685409!2d77.43936587601107!3d23.170472310791343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c4364465bc1a7%3A0x68f59b009c382b23!2sShiva%20Mehar%20Films!5e0!3m2!1sen!2sin!4v1750500818850!5m2!1sen!2sin"
+            width="380" height="220" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <div class="contact-buttons">
+            <a href="tel:+919200010123" class="contact-btn">
+              <span class="contact-btn-icon">📞</span>
+              <span><b>Phone</b><br><span>+91-9200010123</span></span>
+            </a>
+            <a href="mailto:shivameharfilms2@gmail.com" class="contact-btn">
+              <span class="contact-btn-icon">📧</span>
+              <span><b>E-mail</b><br><span>shivameharfilms2@gmail.com</span></span>
+            </a>
+          </div>
         </div>
+        <form class="contact-form" id="quoteForm" autocomplete="off">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your cool name *</label>
+              <input type="text" id="yourName" required>
+            </div>
+            <div class="form-group">
+              <label>Your contact number *</label>
+              <input type="text" id="yourPhone" required pattern="[0-9+\-\s]+" maxlength="18">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Your cool email *</label>
+            <input type="email" id="yourEmail" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Dropdown *</label>
+              <select id="yourDropdown" required>
+                <option>Wedding</option>
+                <option>Pre-Wedding</option>
+                <option>Baby Shower</option>
+                <option>Corporate Event</option>
+                <option>Portrait</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Where are you from? *</label>
+              <input type="text" id="yourLocation" required>
+            </div>
+          </div>
+          <button type="submit" class="quote-btn-main">Get yourself a quote!</button>
+        </form>
+      </div>
+    </section>
+    <!-- Wavy Footer Top (3 Layer Waves) -->
+
+
+
+    <!-- Wavy SVG Footer -->
+    <section style="margin-top: 0px; padding: 0; position: relative; height: 400px;">
+
+      <!-- Clean 3-Wave Transition -->
+      <div style="position: relative; width: 100%; overflow: hidden; line-height: 0; margin-bottom: -1px; ">
+
+        <!-- Wave 1 - Light Gray -->
+        <svg viewBox="0 0 1440 30" preserveAspectRatio="none" style="width: 100%; height: 17px;">
+          <path fill="#e5e5e5" d="M0,15 C360,25 1080,5 1440,15 L1440,0 L0,0 Z"></path>
+        </svg>
+
+        <!-- Wave 2 - Medium Gray -->
+        <svg viewBox="0 0 1440 30" preserveAspectRatio="none" style="width: 100%; height: 17px; margin-top: -15px;">
+          <path fill="#888888" fill-opacity="0.6" d="M0,20 C360,30 1080,10 1440,20 L1440,0 L0,0 Z"></path>
+        </svg>
+
+        <!-- Wave 3 - Dark Gray -->
+        <svg viewBox="0 0 1440 30" preserveAspectRatio="none" style="width: 100%; height: 17px; margin-top: -15px;">
+          <path fill="#222222" fill-opacity="0.9" d="M0,25 C360,30 1080,15 1440,25 L1440,0 L0,0 Z"></path>
+        </svg>
+
       </div>
 
-      <!-- Right -->
-      <div style="flex: 1 1 300px; text-align: right;">
-        <ul style="list-style: none; display: flex; flex-wrap: wrap; gap: 15px; padding: 0; justify-content: flex-end; margin-bottom: 20px;">
-          <li><a href="#" style="color: white; text-decoration: none;">Home</a></li>
-          <li><a href="#" style="color: white; text-decoration: none;">About</a></li>
-          <li><a href="#" style="color: white; text-decoration: none;">Portfolio</a></li>
-          <li><a href="#" style="color: white; text-decoration: none;">Services</a></li>
-          <li><a href="#" style="color: white; text-decoration: none;">Reviews</a></li>
-          <li><a href="#" style="color: white; text-decoration: none;">Gallery</a></li>
-        </ul>
-        <div style="display: flex; gap: 15px; justify-content: flex-end; align-items: center;">
-         <img src="images/instagram.png" alt="Filmic Logo" height="42">
-         <img src="images/facebook1.png" alt="Filmic Logo" height="22">
-          <img src="images/x.png" alt="Filmic Logo" height="22">
-          <img src="images/pinterest.jpg" alt="Filmic Logo" height="22">
-          <img src="images/what_sapp-removebg-preview.png" alt="Filmic Logo" height="35">
-          
+      <!-- Footer -->
+      <footer
+        style="background-color: #111; color: white; padding: 60px 20px 30px; font-family: sans-serif; z-index: 1; position: relative; height: 100%; align-items: center; display: flex; flex-direction: column; justify-content: flex-end; ">
+        <div style="max-width: 1200px;  border-top: 1px dashed #ffffff88; height: 1px; width: 60%; padding: 10px;">
         </div>
-      </div>
 
-    </div>
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: auto; ">
 
-    <div style="text-align: center; margin-top: 40px; font-size: 14px; color: #aaa;">
-      Copyright © 2024 Vivah Shiva Photography | All Rights Reserved | Made with <span style="color: red;">♥</span> by <a href="#" style="color: #4dabf7;">SoftInvo Technologies</a>
-    </div>
-  </footer>
-</section>
+          <!-- Left -->
+          <div style="flex: 1 1 300px;">
+            <!-- <img src="your-logo.png" alt="Filmic Logo" style="width: 100px; margin-bottom: 20px;"> -->
+            <div style="font-size: 40px; font-weight: 900;   font-family: Bebas Neue, sans-serif;">Vivah Shiva</div>
+            <div style="line-height: 1.6;">
+              We are Vivah Shiva Production and we have been in business with an experience 10+ years since 2014.
+            </div>
+          </div>
+
+          <!-- Right -->
+          <div style="flex: 1 1 300px; text-align: right;">
+            <ul
+              style="list-style: none; display: flex; flex-wrap: wrap; gap: 15px; padding: 0; justify-content: flex-end; margin-bottom: 20px;">
+              <li><a href="#" style="color: white; text-decoration: none;">Home</a></li>
+              <li><a href="#" style="color: white; text-decoration: none;">About</a></li>
+              <li><a href="#" style="color: white; text-decoration: none;">Portfolio</a></li>
+              <li><a href="#" style="color: white; text-decoration: none;">Services</a></li>
+              <li><a href="#" style="color: white; text-decoration: none;">Reviews</a></li>
+              <li><a href="#" style="color: white; text-decoration: none;">Gallery</a></li>
+            </ul>
+            <div style="display: flex; gap: 15px; justify-content: flex-end; align-items: center;">
+              <img src="images/instagram.png" alt="Filmic Logo" height="42">
+              <img src="images/facebook1.png" alt="Filmic Logo" height="22">
+              <img src="images/x.png" alt="Filmic Logo" height="22">
+              <img src="images/pinterest.jpg" alt="Filmic Logo" height="22">
+              <img src="images/what_sapp-removebg-preview.png" alt="Filmic Logo" height="35">
+
+            </div>
+          </div>
+
+        </div>
+
+        <div style="text-align: center; margin-top: 40px; font-size: 14px; color: #aaa;">
+          Copyright © 2024 Vivah Shiva Photography | All Rights Reserved | Made with <span style="color: red;">♥</span>
+          by <a href="#" style="color: #4dabf7;">SoftInvo Technologies</a>
+        </div>
+      </footer>
+    </section>
 
 
 
 
 
-    </main>
-    <script src="script.js"></script>
+  </main>
+  <script src="script.js"></script>
 </body>
 
 </html>

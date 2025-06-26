@@ -174,66 +174,32 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// Parallax 3D Card Hover Effect
-document.querySelectorAll('.expertise-card').forEach(card => {
-    card.addEventListener('mousemove', function (e) {
-        const rect = this.getBoundingClientRect();
-        const x = e.clientX - rect.left; // mouse x within card
-        const y = e.clientY - rect.top;  // mouse y within card
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        const rotateX = ((y - centerY) / centerY) * 7; // adjust multiplier for depth
-        const rotateY = ((x - centerX) / centerX) * 11;
-        this.style.transform = `rotateX(${-rotateX}deg) rotateY(${rotateY}deg) scale(1.045)`;
-        // Parallax icon:
-        const icon = this.querySelector('.expertise-icon');
-        if (icon) {
-            icon.style.transform = `translateY(-10px) scale(1.17) rotate(-8deg) translateX(${(rotateY) * 2}px) translateY(${(-rotateX) * 2}px)`;
-        }
-        // Parallax text desc:
-        const desc = this.querySelector('.expertise-desc');
-        if (desc && desc.style.opacity === "1") {
-            desc.style.transform = `translateY(${-rotateX * 2}px) scale(1)`;
-        }
-        this.classList.add('is-hovering');
-    });
-    card.addEventListener('mouseleave', function () {
-        this.style.transform = '';
-        const icon = this.querySelector('.expertise-icon');
-        if (icon) icon.style.transform = '';
-        const desc = this.querySelector('.expertise-desc');
-        if (desc) desc.style.transform = '';
-        this.classList.remove('is-hovering');
-    });
-});
 
 document.addEventListener("DOMContentLoaded", function () {
-    const track = document.getElementById("carouselTrack");
-    let cards = Array.from(track.children);
-    let perPage = window.innerWidth < 700 ? 1 : 2;
-    let cardWidth = cards[0].offsetWidth + parseInt(getComputedStyle(track).gap || 28);
-    let page = 0;
+  const track = document.getElementById("carouselTrack");
+  const carousel = document.querySelector(".reviews-carousel");
+  let cards = Array.from(track.children);
+  let perPage = 2; // Default to 2 cards
+  let cardWidth = 0; // Will be calculated
+  let page = 0;
 
-    // Helper: Clone slides for infinite scroll
-    function cloneSlides() {
-        Array.from(track.querySelectorAll('.clone')).forEach(el => el.remove());
-        // Clone enough cards for smooth infinite effect
-        for (let i = 0; i < perPage; i++) {
-            let clone = cards[i].cloneNode(true);
-            clone.classList.add('clone');
-            track.appendChild(clone);
-        }
+  function updateVars() {
+    cards = Array.from(track.children).filter(card => !card.classList.contains('clone'));
+    perPage = window.innerWidth < 700 ? 1 : 2;
+    cardWidth = cards[0].offsetWidth + parseInt(getComputedStyle(track).gap || 28);
+    // Set carousel container width to fit exactly perPage cards
+    carousel.style.maxWidth = `${cardWidth * perPage}px`;
+    carousel.style.width = `${cardWidth * perPage}px`;
+  }
+
+  function cloneSlides() {
+    Array.from(track.querySelectorAll('.clone')).forEach(el => el.remove());
+    for (let i = 0; i < perPage; i++) {
+      let clone = cards[i % cards.length].cloneNode(true); // Ensure enough clones
+      clone.classList.add('clone');
+      track.appendChild(clone);
     }
-
-    function updateVars() {
-        cards = Array.from(track.children).filter(card => !card.classList.contains('clone'));
-        perPage = window.innerWidth < 700 ? 1 : 2;
-
-        // Use getBoundingClientRect instead of offsetWidth
-        cardWidth = cards[0].getBoundingClientRect().width;
-    }
-
-
+  }
 
     function slideTo(pg, animate = true) {
         updateVars();
@@ -242,24 +208,26 @@ document.addEventListener("DOMContentLoaded", function () {
         track.style.transform = `translateX(-${pg * cardWidth}px)`;
     }
 
-    let intervalId;
-    function startCarousel() {
-        intervalId = setInterval(() => {
-            updateVars();
-            let maxPage = cards.length;
-            page++;
-            slideTo(page, true);
-            // When at clones, snap back to 0 instantly (after animation)
-            if (page === maxPage) {
-                setTimeout(() => {
-                    track.style.transition = 'none';
-                    page = 0;
-                    slideTo(page, false);
-                }, 560);
-            }
-        }, 3500);
-    }
-    function stopCarousel() { clearInterval(intervalId); }
+  let intervalId;
+  function startCarousel() {
+    intervalId = setInterval(() => {
+      updateVars();
+      let maxPage = cards.length;
+      page++;
+      slideTo(page, true);
+      if (page >= maxPage) {
+        setTimeout(() => {
+          track.style.transition = 'none';
+          page = 0;
+          slideTo(page, false);
+        }, 550); // Match transition duration
+      }
+    }, 3500);
+  }
+
+  function stopCarousel() {
+    clearInterval(intervalId);
+  }
 
     window.addEventListener("resize", function () {
         stopCarousel();
@@ -269,15 +237,15 @@ document.addEventListener("DOMContentLoaded", function () {
         startCarousel();
     });
 
-    // Optionally pause on hover
-    track.addEventListener('mouseenter', stopCarousel);
-    track.addEventListener('mouseleave', startCarousel);
+  // Pause on hover
+  track.addEventListener('mouseenter', stopCarousel);
+  track.addEventListener('mouseleave', startCarousel);
 
-    // Init
-    updateVars();
-    cloneSlides();
-    slideTo(page, false);
-    startCarousel();
+  // Initialize
+  updateVars();
+  cloneSlides();
+  slideTo(page, false);
+  startCarousel();
 });
 
 document.getElementById('quoteForm').addEventListener('submit', function (e) {
