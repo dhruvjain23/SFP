@@ -1236,6 +1236,7 @@ h1 {
   will-change: transform;
   /* margin: 0 auto; */
   padding-left: 12px;
+  padding-bottom: 10px;
 }
 .review-card {
   flex: 0 0 210px;
