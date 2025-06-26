@@ -925,7 +925,7 @@ h1 {
 }
 .expertise-header h2 {
   font-size: 2.9rem;
-  font-family: 'Montserrat', serif;
+  font-family: "Montserrat", serif;
   font-weight: 800;
   margin-bottom: 18px;
 }
@@ -970,7 +970,7 @@ h1 {
 }
 
 /* Front and Back Faces */
-.expertise-card-front, 
+.expertise-card-front,
 .expertise-card-back {
   position: absolute;
   width: 100%;
@@ -988,7 +988,7 @@ h1 {
 /* Back Face (Hidden initially) */
 .expertise-card-back {
   transform: rotateY(180deg);
-  background: #D29473;
+  background: #d29473;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -1035,7 +1035,7 @@ h1 {
 /* Description Styles - Now on back face */
 .expertise-card .expertise-desc {
   font-size: 15px;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   /* font-weight: 500; */
   line-height: 1.6;
   transform: none;
@@ -1045,7 +1045,7 @@ h1 {
 
 /* Add depth to back face text */
 .expertise-card-back::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -1242,6 +1242,7 @@ h1 {
   .reviews-carousel {
     justify-content: flex-start;
     gap: 8px;
+    padding: 10px;
   }
   .reviews-cards {
     gap: 16px;
@@ -1263,11 +1264,11 @@ h1 {
     gap: 5px;
   }
   .review-card {
-    width: 96vw;
-    min-width: 96vw;
-    max-width: 96vw;
+    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
     margin: 0 auto;
-    flex: 0 0 96vw;
+    flex: 0 0 200px;
   }
 }
 .contact-section {
@@ -1422,8 +1423,11 @@ h1 {
   .contact-section {
     padding: 36px 0 0 0;
   }
+  .contact-buttons {
+    justify-content: center;
+  }
   .contact-flex {
-    padding: 6vw 2vw 18vw 2vw;
+    padding: 6vw 4vw 18vw 4vw;
   }
   .contact-left h2 {
     font-size: 1.32rem;
